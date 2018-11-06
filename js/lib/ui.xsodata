@@ -1,0 +1,3 @@
+service namespace "DBF_Test.data.services"  {
+	"DBF_Test.db::cds.Parameter" as "Parameters";
+}

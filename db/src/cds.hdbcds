@@ -1,0 +1,13 @@
+namespace DBF_Test.db;
+
+context cds {
+    entity Parameter {
+        key Param_Key  : String(50);
+            Param_Desc : String(50);
+            Param_Type : String(50);
+    };
+    entity Output {
+        key Product_ID   : String(10);
+            Product_Name : String(50);
+    };
+};
