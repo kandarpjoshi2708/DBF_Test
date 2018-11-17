@@ -14,6 +14,7 @@ sap.ui.jsview("ui.ui.view.DBF", {
 	 */
 	createContent: function (oController) {
 		var oModel = new sap.ui.model.odata.v2.ODataModel("/ui.xsodata/", { json: true });
+		
         oModel.setRefreshAfterChange(true);
         
         var oParamsTable = new sap.m.Table({
@@ -194,7 +195,7 @@ sap.ui.jsview("ui.ui.view.DBF", {
         });
         
 		var app = new sap.m.App("myApp", {
-		             initialPage: "oPage"
+		    initialPage: "oPage"
 		});
 		
 		app.addPage(oPage);

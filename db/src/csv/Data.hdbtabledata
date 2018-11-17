@@ -1,0 +1,20 @@
+{
+	"format_version": 1,
+	"imports": [
+		{
+			"target_table": "DBF_Test.db::cds.Parameter",
+			"source_data": {
+			"data_type": "CSV",
+				"file_name": "DBF_Test.db::Param.csv",
+				"has_header": true
+			},
+			"import_settings": {
+			"import_columns": [
+					"Param_Key",
+					"Param_Desc",
+					"Param_Type"
+				]
+			}
+		}
+	]
+}

@@ -1,14 +1,16 @@
 {
-  "welcomeFile": "/ui/index.html",
-  "authenticationMethod": "route",
-  "logout": {
-    "logoutEndpoint": "/do/logout"
-  },
-  "routes": [
-    {
-      "source": "^/ui/(.*)$",
-      "target": "$1",
-      "localDir": "webapp"
-    }
-  ]
+	"welcomeFile": "/ui/index.html",
+	"authenticationMethod": "none",
+	"logout": {
+		"logoutEndpoint": "/do/logout"
+	},
+	"routes": [{
+		"source": "^/ui.xsodata/(.*)$",
+		"destination": "js_be",
+		"authenticationType": "xsuaa"
+	}, {
+		"source": "^/ui/(.*)$",
+		"target": "$1",
+		"localDir": "webapp"
+	}]
 }

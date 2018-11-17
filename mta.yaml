@@ -1,6 +1,6 @@
 ID: DBF_Test
 _schema-version: '2.1'
-version: 0.0.1
+version: 0.0.2
 modules:
   - name: db
     type: hdb
@@ -18,25 +18,27 @@ modules:
       - name: hdi_db
         properties:
           TARGET_CONTAINER: '~{hdi-container-name}'
+      - name: uaa_DBF_Test
   - name: ui
     type: html5
     path: ui
     parameters:
-      disk-quota: 256M
-      memory: 256M
+       disk-quota: 256M
+       memory: 256M
     build-parameters:
-      builder: grunt
+       builder: grunt
     requires:
-      - name: uaa_DBF_Test
-      - name: dest_DBF_Test
-      - name: js_api
-        group: destinations
-        properties:
-          name: js_be
-          url: '~{url}'
-          forwardAuthToken: true
+     - name: uaa_DBF_Test
+     - name: dest_DBF_Test
+     - name: js_api
+       group: destinations
+       properties:
+         name: js_be
+         url: '~{url}'
+         forwardAuthToken: true
     properties:
-      TENANT_HOST_PATTERN: "'^(.*)-Jeroen-ui.cfapps.(.*).hana.ondemand.com'"
+      TENANT_HOST_PATTERN: '^(.*)-Jeroen-ui.cfapps.(.*).hana.ondemand.com'
+      
 resources:
   - name: hdi_db
     properties:

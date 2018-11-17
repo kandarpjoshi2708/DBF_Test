@@ -6,8 +6,4 @@ context cds {
             Param_Desc : String(50);
             Param_Type : String(50);
     };
-    entity Output {
-        key Product_ID   : String(10);
-            Product_Name : String(50);
-    };
 };
